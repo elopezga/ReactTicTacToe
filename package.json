@@ -1,0 +1,18 @@
+{
+  "name": "reacttictactoe",
+  "version": "1.0.0",
+  "description": "A simple Tic-Tac-Toe game build using React and Functional Programming",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --hot" 
+  },
+  "author": "Edgar Lopez-Garcia",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
