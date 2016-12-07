@@ -8,8 +8,5 @@ function Gameboard(props){
   </div>);
 }
 
-function Cell(props){
-  
-}
 
 export default Gameboard;

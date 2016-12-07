@@ -14,7 +14,8 @@ function BoardCell(props){
   var applyStyle = Object.assign({}, style);
   applyStyle = Object.assign(applyStyle, chooseStyle(props.cellStyle));
   
-  return (<div style={applyStyle}>
+  // props.onClick.bind(props)
+  return (<div style={applyStyle} onClick={ ()=>props.onClick(props)}>
       <h1>{props.markType}</h1>
     </div>);
 }

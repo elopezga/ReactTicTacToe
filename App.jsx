@@ -5,23 +5,18 @@ import Gameboard from './Gameboard.jsx';
 import BoardCell from './BoardCell.jsx';
 
 function App(props){
-  // Game logic here (use seperate game logic components)
-  // UI created + control here
-  var boardCells = [<BoardCell key='1' markType='X' cellStyle='top-left' />,
-                    <BoardCell key='2' markType='O' cellStyle='top-center' />,
-                    <BoardCell key='3' markType=' ' cellStyle='top-right' />,
-                    <div></div>,
-                    <BoardCell key='4' markType=' ' cellStyle='middle-left' />,
-                    <BoardCell key='5' markType=' ' cellStyle='middle-center' />,
-                    <BoardCell key='6' markType=' ' cellStyle='middle-right' />,
-                    <div></div>,
-                    <BoardCell key='7' markType=' ' cellStyle='bottom-left' />,
-                    <BoardCell key='8' markType=' ' cellStyle='bottom-center' />,
-                    <BoardCell key='9' markType=' ' cellStyle='bottom-right' />];
+
+  function addOnClickCallback(element, onClickCallback){
+    var newProps = Object.assign({},element.props);
+    newProps.onClick = onClickCallback;
+    return React.cloneElement(element, newProps);
+  }
+  
+  var clickableBoardCells = props.boardCells.map( x => addOnClickCallback(x,props.cellOnClick) );
   
   return ( <div>
       <PlayerTurn player={props.playerTurn} />
-      <Gameboard cellElements={boardCells} />
+      <Gameboard cellElements={clickableBoardCells} />
       <Scoreboard xwins={props.xwins} owins={props.owins} />
     </div>
   );
