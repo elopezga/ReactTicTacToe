@@ -1,4 +1,4 @@
-{
+    {
   "name": "reacttictactoe",
   "version": "1.0.0",
   "description": "A simple Tic-Tac-Toe game build using React and Functional Programming",

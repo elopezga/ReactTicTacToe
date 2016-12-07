@@ -28,6 +28,7 @@ function updateCell(viewModel){
   // construc a viewModel from the view first and then modify accordingly
 }
 
+/*
 var gameViewModel = {
   xwins: 0,
   ywins: 0,
@@ -43,13 +44,11 @@ var gameViewModel = {
                     <BoardCell key='7' markType=' ' cellStyle='bottom-left' />,
                     <BoardCell key='8' markType=' ' cellStyle='bottom-center' />,
                     <BoardCell key='9' markType=' ' cellStyle='bottom-right' />]
-};
-
-var updatedModel = UIController.updateModel(gameViewModel, {playerTurn: 'Y'});
+};*/
 
 
-var appComponent = <App playerTurn={updatedModel.playerTurn} xwins={gameViewModel.xwins} owins={gameViewModel.ywins}
-                  boardCells={gameViewModel.boardCells} cellOnClick={UIController.boardCellOnClick} />;
+var appComponent = <App playerTurn={UIController.viewModel.playerTurn} xwins={UIController.viewModel.xwins} owins={UIController.viewModel.ywins}
+                  boardCells={UIController.viewModel.boardCells} cellOnClick={UIController.boardCellOnClick} />;
 
 console.log('player turn: ' + appComponent.props.playerTurn);
 
