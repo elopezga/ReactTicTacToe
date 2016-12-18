@@ -8,7 +8,7 @@ function PlayerTurn(props){
   
   
   return (<div style={style}>
-    <h1>{props.player}'s turn!</h1>
+    <h1>{props.player}</h1>
   </div>);
 }
 
